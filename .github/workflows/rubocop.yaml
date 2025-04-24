@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 permissions:
   contents: read
-  pull-requests: read
 
 env:
   CONSOLE_OUTPUT: XTerm
@@ -22,4 +21,4 @@ jobs:
 
     - name: Run RuboCop
       timeout-minutes: 10
-      run: bundle exec rubocop --parallel --format github
+      run: bundle exec rubocop --parallel
